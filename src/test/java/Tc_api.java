@@ -33,6 +33,7 @@ public class Tc_api {
         System.out.println(job);
     }
 
+
     @Test
     public void TC_Delete(){
         Response response = given()
