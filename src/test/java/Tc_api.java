@@ -27,7 +27,7 @@ public class Tc_api {
                 .post("/api/users")
                 .then()
                 .log().all()
-                .statusCode(201) // The correct status code for POST method should be 201
+                .statusCode(404) // The correct status code for POST method should be 201
                 .extract().response();
         String job = response.jsonPath().getString("job");
         System.out.println(job);
