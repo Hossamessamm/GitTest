@@ -11,18 +11,15 @@ pipeline {
 
             post {
                 success {
-                    publishHTML(
-                        target: [
-                            allowMissing: false,
-                            alwaysLinkToLastBuild: false,
-                            keepAll: false,
-                            reportDir: 'target/surefire-reports/',
-                            reportFiles: 'emailable-report.html',
-                            reportName: 'HTML Report',
-                            reportTitles: '',
-                            useWrapperFileDirectly: true
-                        ]
-                    )
+                    publishHTML(target: [
+                        allowMissing: false,
+                        alwaysLinkToLastBuild: false,
+                        keepAll: true,
+                        reportDir: 'target/surefire-reports',
+                        reportFiles: 'index.html',
+                        reportName: 'Test Results'
+                    ])
+
                 }
             }
         }
