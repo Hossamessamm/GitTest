@@ -29,7 +29,8 @@ pipeline {
                     jdk: '',
                     properties: [],
                     reportBuildPolicy: 'ALWAYS',
-                    results: [[path: 'allure-results']]
+                    results: [[path: 'allure-results']],
+                    allureInstallation: 'NameOfYourAllureInstallation' // Specify the name of your Allure installation
                 ])
             }
         }
