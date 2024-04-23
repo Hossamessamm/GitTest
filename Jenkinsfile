@@ -16,14 +16,14 @@ pipeline {
                                 results: [[path: 'GitTest/allure-results']] // Replace with your report path
                             ])
                         }
-                    publishHTML(target: [
-                        allowMissing: false,
-                        alwaysLinkToLastBuild: false,
-                        keepAll: true,
-                        reportDir: 'target/surefire-reports',
-                        reportFiles: 'index.html',
-                        reportName: 'Test Results'
-                    ])
+//                     publishHTML(target: [
+//                         allowMissing: false,
+//                         alwaysLinkToLastBuild: false,
+//                         keepAll: true,
+//                         reportDir: 'target/surefire-reports',
+//                         reportFiles: 'index.html',
+//                         reportName: 'Test Results'
+//                     ])
                 }
             }
         }
