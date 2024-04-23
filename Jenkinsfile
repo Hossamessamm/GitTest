@@ -28,14 +28,14 @@ pipeline {
             }
         }
 
-        stage('Generate Allure Report') {
-            steps {
-                script {
-                    // No need for tool block if Allure is accessible through environment variable
-                    bat "${env.ALLURE_HOME}/allure generate allure-results --clean -o GitTest\\allure-report"
-                }
-            }
-        }
+     stage('Generate Allure Report') {
+         steps {
+             script {
+                 // No need for tool block if Allure is accessible globally
+                 bat 'allure generate allure-results --clean -o GitTest\\allure-report'
+             }
+         }
+     }
 
         stage('Open Allure Report') {
             steps {
