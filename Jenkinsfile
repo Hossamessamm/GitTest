@@ -10,6 +10,12 @@ pipeline {
             }
             post {
                 success {
+                always {
+                            allure([
+                                includeProperties: false,
+                                results: [[path: 'GitTest/allure-results']] // Replace with your report path
+                            ])
+                        }
                     publishHTML(target: [
                         allowMissing: false,
                         alwaysLinkToLastBuild: false,
