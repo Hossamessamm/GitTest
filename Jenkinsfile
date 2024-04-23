@@ -32,7 +32,7 @@ pipeline {
             steps {
                 script {
                     // Select the Allure installation
-                    tool 'NameOfYourAllureInstallation'
+                    tool 'ALLURE_Home'
                     // Run Allure command to generate report
                     bat 'allure generate allure-results --clean -o GitTest\\allure-report'
                 }
