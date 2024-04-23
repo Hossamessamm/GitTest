@@ -28,7 +28,7 @@ pipeline {
                     // Select the Allure installation
                     tool 'NameOfYourAllureInstallation'
                     // Run Allure command to generate report
-                    bat 'allure generate allure-results --clean -o target\\allure-report'
+                    bat 'allure generate allure-results --clean -o GitTest\\allure-report'
                 }
             }
         }
@@ -37,7 +37,7 @@ pipeline {
             steps {
                 script {
                     // Open Allure report in the default web browser
-                    bat 'allure open target\\allure-report'
+                    bat 'allure open GitTest\\allure-report'
                 }
             }
         }
